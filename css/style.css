@@ -21,12 +21,13 @@ select{
 	background-color: transparent;
 	border:none;
 	outline: none;
+	cursor: pointer;
 }
 /*顶层导航栏*/
 .top{
 	background-color: #f3f5f7;
 }
-.top .container{
+.top .top-container{
 	font-size:12px;
 	width:1200px;
 	height:44px;
@@ -34,60 +35,54 @@ select{
 	border-bottom:1px solid #cdd0d4;
 	margin:0 auto;
 }
-.top .container .nav-left{
+.top .top-container .nav-left{
 	float:left;
 }
-.top .container .nav-left li{
+.top .top-container .nav-left li{
 	float:left;
 	margin-left:12px;
 }
-.top .container .nav-left .login{
+.top .top-container .nav-left .login{
 	color:#f01414;
 }
-.top .container .nav-right{
+.top .top-container .nav-right{
 	float:right;
 }
-.top .container .nav-right > li{
+.top .top-container .nav-right > li{
 	float:left;
 }
-.top .container .nav-right .car{
-	width:15px;
-	height:18px;
-	background: url(../img/car.png) no-repeat;
+.top .top-container .nav-right .car{
 	margin-left:8px;
 	margin-right:8px;
 	vertical-align: middle;
 }
-.top .container .nav-right .icon{
-	width:8px;
-	height:6px;
-	background: url(../img/dropdown-arrow.png) no-repeat;
+.top .top-container .nav-right .icon{
 	margin-left:8px;
 	vertical-align: middle;
 }
-.top .container .nav-right .null{
+.top .top-container .nav-right .null{
 	width:8px;
 	margin-left:8px;
 }
-.top .container .nav-right .show-list{
+.top .top-container .nav-right .show-list{
 	position: relative;
 	border-left: 1px solid #f3f5f7;
 	border-right: 1px solid #f3f5f7;
 }
-.top .container .nav-right .show-list > a{
+.top .top-container .nav-right .show-list > a{
 	display:block;
 	height: 100%;
 	padding: 0 16px 0 12px;
 	color: #4d555d;
 }
-.top .container .nav-right .show-list:hover{
+.top .top-container .nav-right .show-list:hover{
 	background-color:#fff;
 	border-color:#cdd0d4;
 }
-.top .container .nav-right .show-list:hover > a{
+.top .top-container .nav-right .show-list:hover > a{
 	color:#f01414;
 }
-.top .container .nav-right .show-list:hover .icon{
+.top .top-container .nav-right .show-list:hover .icon{
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -99,7 +94,7 @@ select{
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-.top .container .nav-right .show-list .hide-list{
+.top .top-container .nav-right .show-list .hide-list{
 	display:none;
 	opacity:0;
     position: absolute;
@@ -108,15 +103,15 @@ select{
     border: 1px solid #cdd0d4;
     z-index: 2;
 }
-.top .container .nav-right .show-list .left{
+.top .top-container .nav-right .show-list .left{
 	right:auto;
 	left:-1px;
 }
-.top .container .nav-right .show-list .right{
+.top .top-container .nav-right .show-list .right{
 	right:-1px;
 	left:auto;
 }
-.top .container .nav-right .show-list .hide-list a{
+.top .top-container .nav-right .show-list .hide-list a{
 	padding:0 9px;
 }
 @-webkit-keyframes fadeIn {
@@ -130,7 +125,7 @@ select{
 		opacity: 1; 
 	}
 }
-.top .container .nav-right .show-list:hover .hide-list{
+.top .top-container .nav-right .show-list:hover .hide-list{
 	display:block;
 	opacity:1;
 	border-top:none;
@@ -138,7 +133,7 @@ select{
 	-webkit-animation-duration: .5s;
 	-webkit-animation-iteration-count: 1; 
 }
-.top .container .nav-right .show-list:hover .hide-list li:hover{
+.top .top-container .nav-right .show-list:hover .hide-list li:hover{
 	background-color:#f3f5f7; 
 }
 /*banner区*/
@@ -147,17 +142,17 @@ header{
 	position: sticky;
 	top:0;
 }
-header .main{
+header .header-container{
 	width:1200px;
 	height:100px;
 	margin:0 auto;
 }
-header .main .logo{
+header .header-container .logo{
 	width:250px;
 	float:left;
 	margin: 20px 0 20px 20px;
 }
-header .main .input{
+header .header-container .input{
 	float:left;
 	width:800px;
 	height:48px;
@@ -166,27 +161,28 @@ header .main .input{
 	position: relative;
 	margin: 25px 0;
 }
-header .main .input .search{
+header .header-container .input .search{
 	position: absolute;
 	left:20px;
 	border:none;
 	outline: none;
-	width:500px;
+	width:680px;
 	height:44px;
 	line-height: 44px;
 	font-size:16px;
 	background-color:transparent;
 }
-header .main .input .search-btn{
+header .header-container .input .search-btn{
 	position: absolute;
-	right:0;
+	top:-1px;
+	right:-1px;
 	width:100px;
-	height: 48px;
-	line-height: 48px;
+	height: 50px;
+	line-height: 50px;
 	background:linear-gradient(to right, rgb(255,130,0),rgb(255,100,0));
 	color:#fff;
-	border-top-right-radius: 24px;
-	border-bottom-right-radius: 24px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
 	border:none;
 	outline:none;
 	cursor: pointer;
@@ -197,28 +193,109 @@ header .main .input .search-btn{
 .nav{
 	background: #f3f5f7;
 }
-.ul{
+.nav .nav-container{
 	width:1200px;
-	height:50px;
-	line-height: 50px;
+	height:30px;
+	line-height: 30px;
 	background:linear-gradient(to right, rgb(255,150,0),rgb(255,100,0));
 	color:#fff;
 	margin: 0 auto;
 	font-weight: bold;
 }
-.ul .nav-big li{
+.nav .nav-container .nav-big li{
 	font-size:18px;
 	padding:0 8px;
 	float:left;
 }
-.ul .nav-small li{
+.nav .nav-container .nav-small li{
 	float:left;
 	padding:0 8px;
 }
-.ul a{
+.nav .nav-container a{
 	color:#fff;
 }
 section{
-	height:10000px;
-	background: #f3f5f7;
+	height: 500px;
+	background-color: #f3f5f7;
+}
+/*中心部分*/
+/*轮播图*/
+/*floor1*/
+/*floor2*/
+/*floor3*/
+/*floor4*/
+/*floor5*/
+/*电梯*/
+.elevator{
+	position: fixed;
+	left:320px;
+	top:50%;
+	margin-top:-90px;
+}
+.elevator .elevator-item{
+	display:block;
+	width:24px;
+	height:35px;
+	line-height: 35px;
+	border-top: 1px solid #d9dde1;
+	font-size:8px;
+	text-align: center;
+	color:#4d555d;
+}
+.elevator .elevator-item:hover{
+	color:#f01414;
+}
+.elevator .elevator-item .elevator-text{
+	display:none;
+}
+.elevator .elevator-item:hover .elevator-text{
+	display:block;
+}
+.elevator .elevator-item:hover .elevator-num{
+	display:none;
+}
+/*侧栏工具条*/
+.toolbar{
+	position: fixed;
+	right: 0;
+	top:50%;
+	margin-top:-102px;
+}
+.toolbar .toolbar-item{
+	position:relative;
+	display:block;
+	width:40px;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 1px;
+	color:#fff;
+	text-align:center;
+}
+.toolbar .toolbar-item > i{
+	position: relative;
+	z-index: 2;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	background-color: #b7bbbf;
+	font-size:30px;
+}
+.toolbar .toolbar-item .toolbar-text{
+	position: absolute;
+	left:0;
+	top:0;
+	width:80px;
+	height: 40px;
+	color:#fff;
+	font-size:16px;
+}
+.toolbar .toolbar-item:hover .toolbar-icon{
+	background-color: #71777d;
+}
+.toolbar .toolbar-item:hover .toolbar-text{
+	left:-80px;
+	background-color: #71777d;
+}
+.toolbar .toolbar-item:hover .toolbar-text:hover{
+	color:red;
 }

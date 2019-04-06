@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
 	<title>淘宝Demo</title>
@@ -8,10 +8,11 @@
 <body>
 	<!-- 顶层导航区 -->
 	<nav class="top">
-		<div class="container">
+		<div class="top-container">
 			<ul class="nav-left">
 				<li>
 					<select>
+						<option>-请选择-</option>
 						<option>全球</option>
 						<option selected>中国大陆</option>
 						<option>香港</option>
@@ -33,15 +34,15 @@
 			</ul>
 			<ul class="nav-right">
 				<li class="show-list">
-					<a href="javascript:;">我的淘宝<i class="icon"></i></a>
+					<a href="javascript:;">我的淘宝<i class="icon fa fa-angle-down"></i></a>
 					<ul class="hide-list left">
 						<li><a href="javascript:;">已买到的宝贝</a></li>
 						<li><a href="javascript:;">我的足迹</a></li>
 					</ul>
 				</li>
-				<li><a href="javascript:;"><i class="car"></i>购物车(0)<i class="null"></i></a></li>
+				<li><a href="javascript:;"><i class="car fa fa-shopping-cart"></i>购物车(0)<i class="null"></i></a></li>
 				<li class="show-list">
-					<a href="javascript:;">收藏夹<i class="icon"></i></a>
+					<a href="javascript:;">收藏夹<i class="icon fa fa-angle-down"></i></a>
 					<ul class="hide-list left">
 						<li><a href="javascript:;">收藏的宝贝</a></li>
 						<li><a href="javascript:;">收藏的店铺</a></li>
@@ -49,7 +50,7 @@
 				</li>
 				<li><a href="javascript:;"><i class="null"></i>商品分类<i class="null"></i></a></li>
 				<li class="show-list">
-					<a href="javascript:;">卖家中心<i class="icon"></i></a>
+					<a href="javascript:;">卖家中心<i class="icon fa fa-angle-down"></i></a>
 					<ul class="hide-list left">
 						<li><a href="javascript:;">免费开店</a></li>
 						<li><a href="javascript:;">已卖出的宝贝</a></li>
@@ -61,7 +62,7 @@
 					</ul>
 				</li>
 				<li class="show-list">
-					<a href="javascript:;">联系客服<i class="icon"></i></a>
+					<a href="javascript:;">联系客服<i class="icon fa fa-angle-down"></i></a>
 					<ul class="hide-list right">
 						<li><a href="javascript:;">消费者客服</a></li>
 						<li><a href="javascript:;">卖家客服</a></li>
@@ -72,7 +73,7 @@
 	</nav>
 	<!-- banner区 -->
 	<header>
-		<div class="main">
+		<div class="header-container">
 			<div class="logo">
 				<a href="#"><img src="img/logo.png"></a>
 			</div>
@@ -84,7 +85,7 @@
 	</header>
 	<!-- 导航栏 -->
 	<nav class="nav">
-		<div class="ul">
+		<div class="nav-container">
 			<ul class="nav-big">
 				<li><a href="https://www.tmall.com/" target="_blank">天猫</a></li>
 				<li><a href="https://ju.taobao.com/" target="_blank">聚划算</a></li>
@@ -106,7 +107,117 @@
 			</ul>
 		</div>
 	</nav>
-	<section></section>
+	<!-- 中心部分 -->
+	<section class="main">
+		<div class="main-container">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</section>
+	<!-- 轮播图 -->
+	<section class="lunbo">
+		<div class="lunbo-container">
+			<div class="lunbo-item">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="lunbo-item">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="lunbo-item">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</section>
+	<!-- floor1 -->
+	<section class="floor">
+		<div class="floor-container">
+			
+		</div>
+	</section>
+	<!-- floor2 -->
+	<section class="floor">
+		<div class="floor-container">
+			
+		</div>
+	</section>
+	<!-- floor3 -->
+	<section class="floor">
+		<div class="floor-container">
+			
+		</div>
+	</section>
+	<!-- floor4 -->
+	<section class="floor">
+		<div class="floor-container">
+			
+		</div>
+	</section>
+	<!-- floor5 -->
+	<section class="floor">
+		<div class="floor-container">
+			
+		</div>
+	</section>
+	<!-- 电梯 -->
+	<section class="elevator">
+		<a href="javascript:;" class="elevator-item">
+            <span class="elevator-num">F1</span>
+            <span class="elevator-text">服饰</span>
+        </a>
+        <a href="javascript:;" class="elevator-item">
+            <span class="elevator-num">F2</span>
+            <span class="elevator-text">美妆</span>
+        </a>
+        <a href="javascript:;" class="elevator-item">
+            <span class="elevator-num">F3</span>
+            <span class="elevator-text">手机</span>
+        </a>
+        <a href="javascript:;" class="elevator-item">
+            <span class="elevator-num">F4</span>
+            <span class="elevator-text">家电</span>
+        </a>
+        <a href="javascript:;" class="elevator-item">
+            <span class="elevator-num">F5</span>
+            <span class="elevator-text">数码</span>
+        </a>
+	</section>
+	<!-- 侧栏工具条 -->
+	<section class="toolbar">
+		<a href="javascript:;" class="toolbar-item">
+            <i class="fa fa-user-o"></i>
+            <span class="toolbar-text">会员</span>
+        </a>
+        <a href="javascript:;" class="toolbar-item">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="toolbar-text">购物车</span>
+        </a>
+        <a href="javascript:;" class="toolbar-item">
+            <i class="fa fa-heart-o"></i>
+            <span class="toolbar-text">我的关注</span>
+        </a>
+        <a href="javascript:;" class="toolbar-item">
+            <i class="fa fa-commenting-o"></i>
+            <span class="toolbar-text">我的消息</span>
+        </a>
+        <a href="#" class="toolbar-item">
+            <i class="fa fa-chevron-up"></i>
+            <span class="toolbar-text">顶部</span>
+        </a>
+	</section>
+	<script src="https://use.fontawesome.com/ce21ee1997.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
