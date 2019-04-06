@@ -17,6 +17,11 @@ a:hover{
 i{
 	display: inline-block;
 }
+select{
+	background-color: transparent;
+	border:none;
+	outline: none;
+}
 /*顶层导航栏*/
 .top{
 	background-color: #f3f5f7;
@@ -95,11 +100,13 @@ i{
     transition: all 0.5s;
 }
 .top .container .nav-right .show-list .hide-list{
+	display:none;
 	opacity:0;
     position: absolute;
     top:44px;
     background-color:#fff;
     border: 1px solid #cdd0d4;
+    z-index: 2;
 }
 .top .container .nav-right .show-list .left{
 	right:auto;
@@ -124,17 +131,94 @@ i{
 	}
 }
 .top .container .nav-right .show-list:hover .hide-list{
+	display:block;
 	opacity:1;
 	border-top:none;
 	-webkit-animation-name: fadeIn;
 	-webkit-animation-duration: .5s;
 	-webkit-animation-iteration-count: 1; 
 }
-.top .container .nav-right .show-list .hide-list li:hover{
+.top .container .nav-right .show-list:hover .hide-list li:hover{
 	background-color:#f3f5f7; 
 }
 /*banner区*/
 header{
+	background-color: #fff;
+	position: sticky;
+	top:0;
+}
+header .main{
 	width:1200px;
+	height:100px;
 	margin:0 auto;
+}
+header .main .logo{
+	width:250px;
+	float:left;
+	margin: 20px 0 20px 20px;
+}
+header .main .input{
+	float:left;
+	width:800px;
+	height:48px;
+	border:1px solid #f01414;
+	border-radius: 25px;
+	position: relative;
+	margin: 25px 0;
+}
+header .main .input .search{
+	position: absolute;
+	left:20px;
+	border:none;
+	outline: none;
+	width:500px;
+	height:44px;
+	line-height: 44px;
+	font-size:16px;
+	background-color:transparent;
+}
+header .main .input .search-btn{
+	position: absolute;
+	right:0;
+	width:100px;
+	height: 48px;
+	line-height: 48px;
+	background:linear-gradient(to right, rgb(255,130,0),rgb(255,100,0));
+	color:#fff;
+	border-top-right-radius: 24px;
+	border-bottom-right-radius: 24px;
+	border:none;
+	outline:none;
+	cursor: pointer;
+	font-size:20px;
+	font-weight: bold;
+}
+/*导航栏*/
+.nav{
+	background: #f3f5f7;
+}
+.ul{
+	width:1200px;
+	height:50px;
+	line-height: 50px;
+	background:linear-gradient(to right, rgb(255,150,0),rgb(255,100,0));
+	color:#fff;
+	margin: 0 auto;
+	font-weight: bold;
+}
+.ul .nav-big li{
+	font-size:18px;
+	padding:0 8px;
+	float:left;
+}
+.ul .nav-small li{
+	float:left;
+	padding:0 8px;
+}
+.ul a{
+	color:#fff;
+}
+section{
+	height:10000px;
+	background: #f3f5f7;
 }
