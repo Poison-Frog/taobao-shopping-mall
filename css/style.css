@@ -1,0 +1,140 @@
+/*通用*/
+*{
+	font-family: 'Microsoft Yahei UI';
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+	color:#4d555d;
+}
+a:hover{
+	color:#f01414;
+}
+i{
+	display: inline-block;
+}
+/*顶层导航栏*/
+.top{
+	background-color: #f3f5f7;
+}
+.top .container{
+	font-size:12px;
+	width:1200px;
+	height:44px;
+	line-height: 44px;
+	border-bottom:1px solid #cdd0d4;
+	margin:0 auto;
+}
+.top .container .nav-left{
+	float:left;
+}
+.top .container .nav-left li{
+	float:left;
+	margin-left:12px;
+}
+.top .container .nav-left .login{
+	color:#f01414;
+}
+.top .container .nav-right{
+	float:right;
+}
+.top .container .nav-right > li{
+	float:left;
+}
+.top .container .nav-right .car{
+	width:15px;
+	height:18px;
+	background: url(../img/car.png) no-repeat;
+	margin-left:8px;
+	margin-right:8px;
+	vertical-align: middle;
+}
+.top .container .nav-right .icon{
+	width:8px;
+	height:6px;
+	background: url(../img/dropdown-arrow.png) no-repeat;
+	margin-left:8px;
+	vertical-align: middle;
+}
+.top .container .nav-right .null{
+	width:8px;
+	margin-left:8px;
+}
+.top .container .nav-right .show-list{
+	position: relative;
+	border-left: 1px solid #f3f5f7;
+	border-right: 1px solid #f3f5f7;
+}
+.top .container .nav-right .show-list > a{
+	display:block;
+	height: 100%;
+	padding: 0 16px 0 12px;
+	color: #4d555d;
+}
+.top .container .nav-right .show-list:hover{
+	background-color:#fff;
+	border-color:#cdd0d4;
+}
+.top .container .nav-right .show-list:hover > a{
+	color:#f01414;
+}
+.top .container .nav-right .show-list:hover .icon{
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.top .container .nav-right .show-list .hide-list{
+	opacity:0;
+    position: absolute;
+    top:44px;
+    background-color:#fff;
+    border: 1px solid #cdd0d4;
+}
+.top .container .nav-right .show-list .left{
+	right:auto;
+	left:-1px;
+}
+.top .container .nav-right .show-list .right{
+	right:-1px;
+	left:auto;
+}
+.top .container .nav-right .show-list .hide-list a{
+	padding:0 9px;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0; 
+	}
+	50% {
+		opacity: 0.6; 
+	}
+	100% {
+		opacity: 1; 
+	}
+}
+.top .container .nav-right .show-list:hover .hide-list{
+	opacity:1;
+	border-top:none;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count: 1; 
+}
+.top .container .nav-right .show-list .hide-list li:hover{
+	background-color:#f3f5f7; 
+}
+/*banner区*/
+header{
+	width:1200px;
+	margin:0 auto;
+}
