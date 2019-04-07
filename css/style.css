@@ -214,10 +214,6 @@ header .header-container .input .search-btn{
 .nav .nav-container a{
 	color:#fff;
 }
-section{
-	height: 500px;
-	background-color: #f3f5f7;
-}
 /*中心部分*/
 /*轮播图*/
 /*floor1*/
@@ -225,6 +221,61 @@ section{
 /*floor3*/
 /*floor4*/
 /*floor5*/
+/*友情链接区*/
+.com{
+	background-color: #f3f5f7;
+}
+.com-container{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.com .com-container .com-block{
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+.com .com-container .com-block .com-title{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+    color:#4d555d;
+}
+.com .com-container .com-block .com-title i{
+	font-size:30px;
+}
+.com .com-container .com-block .com-text{
+    line-height: 40px;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+}
+.com .com-container .com-block .com-text a:hover{
+    color: red;
+}
+/*底部导航*/
+.bottom-container{
+	width:1200px;
+	height: 70px;
+	margin:0 auto;
+	font-size:14px;
+	border-top:1px solid #cdd0d4;
+	border-bottom:1px solid #cdd0d4;
+}
+.bottom-container .bottom-nav-ul{
+	padding-top:10px;
+	width:100%;
+}
+.bottom-container .bottom-nav-ul li{
+	float:left;
+	color:#cdd0d4;
+}
+/*脚部*/
+
 /*电梯*/
 .elevator{
 	position: fixed;
@@ -289,7 +340,7 @@ section{
 	color:#fff;
 	font-size:16px;
 }
-.toolbar .toolbar-item:hover .toolbar-icon{
+.toolbar .toolbar-item:hover i{
 	background-color: #71777d;
 }
 .toolbar .toolbar-item:hover .toolbar-text{
