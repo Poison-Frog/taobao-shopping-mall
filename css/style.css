@@ -25,7 +25,11 @@ select{
 }
 /*顶层导航栏*/
 .top{
-	background-color: #f3f5f7;
+	background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
 }
 .top .top-container{
 	font-size:12px;
@@ -52,13 +56,13 @@ select{
 	float:left;
 }
 .top .top-container .nav-right .car{
+	width:8px;
 	margin-left:8px;
 	margin-right:8px;
-	vertical-align: middle;
 }
 .top .top-container .nav-right .icon{
+	width:8px;
 	margin-left:8px;
-	vertical-align: middle;
 }
 .top .top-container .nav-right .null{
 	width:8px;
@@ -66,8 +70,8 @@ select{
 }
 .top .top-container .nav-right .show-list{
 	position: relative;
-	border-left: 1px solid #f3f5f7;
-	border-right: 1px solid #f3f5f7;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
 }
 .top .top-container .nav-right .show-list > a{
 	display:block;
@@ -101,7 +105,7 @@ select{
     top:44px;
     background-color:#fff;
     border: 1px solid #cdd0d4;
-    z-index: 2;
+    z-index: 4;
 }
 .top .top-container .nav-right .show-list .left{
 	right:auto;
@@ -141,6 +145,7 @@ header{
 	background-color: #fff;
 	position: sticky;
 	top:0;
+	z-index: 3;
 }
 header .header-container{
 	width:1200px;
@@ -152,7 +157,7 @@ header .header-container .logo{
 	float:left;
 	margin: 20px 0 20px 20px;
 }
-header .header-container .input{
+header .header-container .search{
 	float:left;
 	width:800px;
 	height:48px;
@@ -161,18 +166,18 @@ header .header-container .input{
 	position: relative;
 	margin: 25px 0;
 }
-header .header-container .input .search{
+header .header-container .search .input{
 	position: absolute;
 	left:20px;
 	border:none;
 	outline: none;
-	width:680px;
+	width:679px;
 	height:44px;
 	line-height: 44px;
 	font-size:16px;
 	background-color:transparent;
 }
-header .header-container .input .search-btn{
+header .header-container .search .search-btn{
 	position: absolute;
 	top:-1px;
 	right:-1px;
@@ -183,24 +188,96 @@ header .header-container .input .search-btn{
 	color:#fff;
 	border-top-right-radius: 25px;
 	border-bottom-right-radius: 25px;
-	border:none;
+	border-left:1px solid #f01414;
+	border-top:none;
+	border-bottom:none;
+	border-right:none;
 	outline:none;
 	cursor: pointer;
 	font-size:20px;
 	font-weight: bold;
 }
-/*导航栏*/
-.nav{
-	background: #f3f5f7;
+header .header-container .search .search-layer{
+	display: none;
+	position: absolute;
+	top:100%;
+	left:20px;
+	width:680px;
+	background-color: #fff;
+	border:1px solid #f01414;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	overflow:hidden;
 }
+header .header-container .search .search-layer .search-layer-item{
+	height:24px;
+	line-height: 24px;
+	padding:0 10px;
+	cursor: pointer;
+	color:#4d555d;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+header .header-container .search .search-layer .search-layer-item:hover{
+	background-color: #f3f5f7;
+}
+/*中心部分*/
+.main{
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+/*导航栏*/
 .nav .nav-container{
 	width:1200px;
+	margin: 0 auto;
 	height:30px;
 	line-height: 30px;
-	background:linear-gradient(to right, rgb(255,150,0),rgb(255,100,0));
-	color:#fff;
-	margin: 0 auto;
 	font-weight: bold;
+}
+.nav .nav-container ul{
+	float:left;
+}
+.nav .nav-container ul li{
+	background-image: linear-gradient(to right,orange,yellow,orange);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
 }
 .nav .nav-container .nav-big li{
 	font-size:18px;
@@ -212,10 +289,132 @@ header .header-container .input .search-btn{
 	padding:0 8px;
 }
 .nav .nav-container a{
-	color:#fff;
+	color:yellow;
 }
-/*中心部分*/
+/*中部*/
+.middle{
+	width: 100%;
+	margin-bottom: 8px;
+}
+.middle-container{
+	width:1200px;
+	height: 504px;
+	margin:0 auto;
+}
+.middle-category{
+	background: red;
+	float:left;
+    position: relative;
+    width: 208px;
+    margin-top: -62px;
+    font-size: 14px;
+	height:566px;
+}
+.middle-slider{
+	background-color: black;
+    position: relative;
+    z-index:1;
+    height:100%;
+    margin-bottom:10px;
+    overflow: hidden;
+}
+aside{
+	float:right;
+	background-color: white;
+	width: 249px;
+	height:504px;
+}
 /*轮播图*/
+.lunbo .lunbo-container{
+	width:1200px;
+	margin:0 auto;
+	background-color: green;
+}
+.lunbo .lunbo-slider{
+    position: relative;
+    z-index:1;
+    width:100%;
+    height:158px;
+    margin-bottom:10px;
+    overflow: hidden;
+}
+.lunbo .slider-img{
+	display:block;
+	float:left;
+    width:240px;
+} 
+.lunbo .slider-control {
+    display:block;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    background-color: #000;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+.lunbo .slider-control-left {
+    left: 0;
+}
+.lunbo .slider-control-right {
+    right: 0;
+}
+/*楼层区*/
+.floor{
+	width: 1200px;
+	margin:0 auto;
+	background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+.floor .floor-container{
+	height:500px;
+	position: relative;
+}
+.floor-head {
+	height: 68px;
+	border-bottom: 1px solid #f01414;
+}
+.floor-title {
+	margin-top: 20px;
+	float:left;
+	padding-left:10px;
+}
+.floor-title-num {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 50%;
+	background-color: #07111b;
+	margin-right: 12px;
+	color: #fff;
+	font-size:14px;
+	font-weight: normal;
+	text-align: center;
+}
+.floor-title-text {
+	position: relative;
+	top: 3px;
+	color: #07111b;
+	font-size: 20px;
+}
+.floor-container ul{
+	margin-top: 22px;
+	float:right;
+	padding-right:10px;
+}
+.floor-container ul li{
+	float:left;
+	padding-right:10px;
+	color:#4d555d;
+}
 /*floor1*/
 /*floor2*/
 /*floor3*/
@@ -246,6 +445,7 @@ header .header-container .input .search-btn{
     color:#4d555d;
 }
 .com .com-container .com-block .com-title i{
+	width:30px;
 	font-size:30px;
 }
 .com .com-container .com-block .com-text{
@@ -262,12 +462,12 @@ header .header-container .input .search-btn{
 	width:1200px;
 	height: 70px;
 	margin:0 auto;
-	font-size:14px;
+	font-size:8px;
 	border-top:1px solid #cdd0d4;
 	border-bottom:1px solid #cdd0d4;
 }
 .bottom-container .bottom-nav-ul{
-	padding-top:10px;
+	padding-top:13px;
 	width:100%;
 }
 .bottom-container .bottom-nav-ul li{
@@ -275,7 +475,38 @@ header .header-container .input .search-btn{
 	color:#cdd0d4;
 }
 /*脚部*/
-
+.footer-container{
+	width: 1200px;
+	margin:0 auto;
+	padding-bottom:20px;
+	font-size:8px;
+}
+.footer-ul{
+	overflow:hidden;
+}
+.footer-ul:first-child{
+	padding-top:10px;
+}
+.footer-ul:first-child li{
+	padding-right:5px;
+}
+.footer-ul li{
+	float:left;
+	color:#cdd0d4;
+}
+.footer-ul li i{
+	width:20px;
+	font-size:15px;
+}
+.footer-ul .footer-ul-p{
+	padding-left: 30px;
+	color:#4d555d;
+	opacity: .6;	
+}
+.footer-ul .footer-ul-text{
+	color:#4d555d;
+	opacity: .6;	
+}
 /*电梯*/
 .elevator{
 	position: fixed;
@@ -291,10 +522,10 @@ header .header-container .input .search-btn{
 	border-top: 1px solid #d9dde1;
 	font-size:8px;
 	text-align: center;
-	color:#4d555d;
+	color:#fff;
 }
 .elevator .elevator-item:hover{
-	color:#f01414;
+	color:yellow;
 }
 .elevator .elevator-item .elevator-text{
 	display:none;
@@ -339,6 +570,11 @@ header .header-container .input .search-btn{
 	height: 40px;
 	color:#fff;
 	font-size:16px;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 .toolbar .toolbar-item:hover i{
 	background-color: #71777d;
@@ -348,5 +584,5 @@ header .header-container .input .search-btn{
 	background-color: #71777d;
 }
 .toolbar .toolbar-item:hover .toolbar-text:hover{
-	color:red;
+	color:yellow;
 }
