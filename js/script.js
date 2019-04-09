@@ -1,6 +1,4 @@
-(function($) {
-    'use strict';
-
+$(document).ready(function() {
     var $search = $('.search'),
         $form = $search.find('search-form'),
         $input = $search.find('.input'),
@@ -45,7 +43,7 @@
             }
             for (var i = 0; i < dataNum; i++) {
                 if (i >= maxNum) break;
-                html += '<li class="search-layer-item text-ellipsis">' + data['result'][i][0] + '</li>';
+                html += '<li class="search-layer-item">' + data['result'][i][0] + '</li>';
             }
             $layer.html(html).show();
 
@@ -74,6 +72,36 @@
     function removeHtmlTags(str) {
         return str.replace(/<(?:[^>'"]|"[^"]*"|'[^']*')*>/g, '');
     };
-
-})(jQuery);
+    // 中间轮播图
+    var circle = $(".slider-circle-btn");
+    picPlay($(".middle-slider-container"), circle, $(".middle-slider"), $(".middle-slider-container>a:first"));
+    function picPlay(pic, list, wrap, firstobj) {
+        var len = list.length;
+        var index = 0;  //图片序号
+        var adTimer;
+        list.mouseover(function () {
+            index = list.index(this);  //获取鼠标悬浮 li 的index
+            showImg(index);
+        }).eq(0).mouseover();
+        //滑入停止动画，滑出开始动画.
+        wrap.hover(function () {
+            clearInterval(adTimer);
+        }, function () {
+            adTimer = setInterval(function () {
+                showImg(index);
+                index++;
+                if (index == len) {//最后一张图片之后，转到第一张
+                    index = 0;
+                }
+            }, 2000);
+        }).trigger("mouseleave");
+        //图片切换
+        function showImg(index) {
+            pic.animate({
+                "marginTop": -504 * index + "px"
+            }, 1);
+            list.removeClass("active").eq(index).addClass("active");
+        }
+    }
+});
 
