@@ -72,6 +72,13 @@ $(document).ready(function() {
     function removeHtmlTags(str) {
         return str.replace(/<(?:[^>'"]|"[^"]*"|'[^']*')*>/g, '');
     };
+    //左侧菜单
+    $(".dropdown").bind('mouseover', function (event) {
+        $(this).children(".dropdown-layer").show();
+    });
+    $(".dropdown").bind('mouseout', function (event) {
+        $(this).children(".dropdown-layer").hide();
+    });
     // 中间轮播图
     var circle = $(".slider-circle-btn");
     picPlay($(".middle-slider-container"), circle, $(".middle-slider"), $(".middle-slider-container>a:first"));

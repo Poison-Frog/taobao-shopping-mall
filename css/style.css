@@ -330,7 +330,21 @@ header .header-container .search .search-layer .search-layer-item:hover{
 .category-title:hover{
 	color:#fff;
 }
-.dropdown-link{
+.dropdown-layer {
+	display:none;
+	position: absolute;
+	top:50px;
+    left: 100%;
+    width: 744px;
+    min-height: 473px;
+    padding: 8px 0 31px 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);    
+    border: 1px solid #cdd0d4;
+	z-index: 3;
+}
+.dropdown{
+	padding-left: 15px;
 	height:36px;
 	line-height: 36px;
 	color:#fff;
@@ -338,11 +352,8 @@ header .header-container .search .search-layer .search-layer-item:hover{
 .dropdown-link:first-child{
 	padding-left: 15px;
 }
-.dropdown-toggle:hover{
+.dropdown:hover{
 	background-color: #fff;
-	color:#f00;
-}
-.dropdown-toggle:hover .dropdown-link{
 	color:#f00;
 }
 .dropdown-arrow{
@@ -573,7 +584,11 @@ aside{
 /*floor5*/
 /*友情链接区*/
 .com{
-	background-color: #f3f5f7;
+	background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
 }
 .com-container{
     width: 1200px;
