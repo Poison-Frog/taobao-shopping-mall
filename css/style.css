@@ -345,9 +345,11 @@ header .header-container .search .search-layer .search-layer-item:hover{
 }
 .dropdown{
 	padding-left: 15px;
-	height:36px;
-	line-height: 36px;
+	margin-bottom: 2px;
+	height:34px;
+	line-height: 34px;
 	color:#fff;
+	cursor: pointer;
 }
 .dropdown-link:first-child{
 	padding-left: 15px;
