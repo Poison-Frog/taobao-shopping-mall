@@ -338,7 +338,11 @@ header .header-container .search .search-layer .search-layer-item:hover{
     width: 744px;
     min-height: 473px;
     padding: 8px 0 31px 0;
-    background-color: #fff;
+    background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);    
     border: 1px solid #cdd0d4;
 	z-index: 3;
