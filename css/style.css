@@ -346,6 +346,23 @@ header .header-container .search .search-layer .search-layer-item:hover{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);    
     border: 1px solid #cdd0d4;
 	z-index: 3;
+	cursor: default;
+}
+.dropdown-layer li span{
+	display: block;
+	width:110px;
+	float:left;
+	text-align:right;
+	color:#000;
+	font-weight: bold;
+	padding-right: 20px;
+}
+.dropdown-layer li a{
+	float:left;
+	margin-right: 10px;
+}
+.dropdown-layer li .br{
+	margin-left:130px;
 }
 .dropdown{
 	padding-left: 15px;
