@@ -1664,21 +1664,21 @@
                 	<div class="aside-ad"></div>
 				</aside>
 				<!-- 中间轮播图 -->
-				<div class="middle-slider">
-					<div class="middle-slider-container">
+				<div class="middle-slider" id="slider">
+					<div class="middle-slider-container" id="pics">
                         <a href="###" target="_blank"><img src="img/focus-slider/1.png"/></a>
                         <a href="###" target="_blank"><img src="img/focus-slider/2.png"/></a>
                         <a href="###" target="_blank"><img src="img/focus-slider/3.png"/></a>
                         <a href="###" target="_blank"><img src="img/focus-slider/4.png"/></a>
                 	</div>
-                	<ol class="slider-button">
-                    	<li class="slider-circle-btn active"></li>
-                    	<li class="slider-circle-btn"></li>
-                    	<li class="slider-circle-btn"></li>
-                    	<li class="slider-circle-btn"></li>
-                	</ol>
-                	<a href="javascript:;" class="slider-control slider-control-left">&lt;</a>
-                	<a href="javascript:;" class="slider-control slider-control-right">&gt;</a>
+                	<div class="dots" id="dots">
+						<span class="active"></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+                	<a href="javascript:;" id="left" class="slider-control slider-control-left">&lt;</a>
+                	<a href="javascript:;" id="right" class="slider-control slider-control-right">&gt;</a>
 				</div>
 			</div>
 		</section>
@@ -1687,30 +1687,21 @@
 			<div class="lunbo-container">
 				<div class="lunbo-slider">
                 <div class="slider-container">
-                    <div class="slider-item">
-                        <a href="###" target="_blank"><img src="img/todays-slider/1.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/2.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/3.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/4.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/5.png" class="slider-img"/></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="###" target="_blank"><img src="img/todays-slider/6.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/7.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/8.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/9.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/10.png" class="slider-img"/></a>
-                    </div>
-                    <div class="slider-item">
-                        <a href="###" target="_blank"><img src="img/todays-slider/11.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/3.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/5.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/7.png" class="slider-img"/></a>
-                        <a href="###" target="_blank"><img src="img/todays-slider/9.png" class="slider-img"/></a>
+                    <div class="slider-item" id="item">
+                        <div><img src="img/todays-slider/1.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/2.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/3.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/4.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/5.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/6.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/7.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/8.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/9.png" class="slider-img"/></div>
+                        <div><img src="img/todays-slider/10.png" class="slider-img"/></div>
                     </div>
                 </div>
-                <a href="javascript:;" class="slider-control slider-control-left">&lt;</a>
-                <a href="javascript:;" class="slider-control slider-control-right">&gt;</a>
+                <a href="javascript:;" id="up" class="slider-control slider-control-left">&lt;</a>
+                <a href="javascript:;" id="down" class="slider-control slider-control-right">&gt;</a>
             	</div>
 			</div>
 		</section>

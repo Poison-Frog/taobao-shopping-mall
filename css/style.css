@@ -483,18 +483,23 @@ aside{
 	height:504px;
 }
 .slider-control {
-    /*display:none;*/
     width: 28px;
     height: 62px;
     line-height: 62px;
     position: absolute;
     top: 50%;
     margin-top: -31px;
-    background-color: #000;
+    background-color: transparent;
     opacity: 0.8;
     color: #fff;
     font-size: 22px;
     text-align: center;
+    font-family: simsun;
+    font-weight: bold;
+}
+.slider-control:hover{
+	background-color: #000;
+	color:#fff;
 }
 .middle-slider .slider-control-left {
     left: 8px;
@@ -502,30 +507,35 @@ aside{
 .middle-slider .slider-control-right {
     right: 7px;
 }
-.slider-button {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    margin-left: -36px;
+.dots {
+	position: absolute;
+	bottom: 24px;
+	right: 0;
+	left:0;
+	text-align: center;
+	padding-right: 24px;
+	line-height: 12px;
 }
-.slider-circle-btn {
-	float:left;
-    width: 8px;
-    height: 8px;
-    background-color: #313a43;
-    border-radius: 50%;
-    margin-right: 12px;
-    cursor: pointer;
-    overflow: hidden;
+.dots span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-left: 8px;
+	background-color: rgba(7, 17, 27, 0.4);
+	cursor: pointer;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
 }
-.active{
-	background-color: #fff;
+
+.dots span.active{
+	box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+	background-color: #ffffff;
 }
+
 /*轮播图*/
 .lunbo .lunbo-container{
 	width:1200px;
 	margin:0 auto;
-	background-color: green;
 }
 .lunbo .lunbo-slider{
     position: relative;
@@ -536,9 +546,7 @@ aside{
     overflow: hidden;
 }
 .lunbo .slider-img{
-	display:block;
 	float:left;
-    width:240px;
 } 
 .lunbo .slider-control-left {
     left: 0;

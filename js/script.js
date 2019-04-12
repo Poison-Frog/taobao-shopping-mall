@@ -80,35 +80,114 @@ $(document).ready(function() {
         $(this).children(".dropdown-layer").hide();
     });
     // 中间轮播图
-    var circle = $(".slider-circle-btn");
-    picPlay($(".middle-slider-container"), circle, $(".middle-slider"), $(".middle-slider-container>a:first"));
-    function picPlay(pic, list, wrap, firstobj) {
-        var len = list.length;
-        var index = 0;  //图片序号
-        var adTimer;
-        list.mouseover(function () {
-            index = list.index(this);  //获取鼠标悬浮 li 的index
-            showImg(index);
-        }).eq(0).mouseover();
-        //滑入停止动画，滑出开始动画.
-        wrap.hover(function () {
-            clearInterval(adTimer);
-        }, function () {
-            adTimer = setInterval(function () {
-                showImg(index);
-                index++;
-                if (index == len) {//最后一张图片之后，转到第一张
-                    index = 0;
-                }
-            }, 2000);
-        }).trigger("mouseleave");
-        //图片切换
-        function showImg(index) {
-            pic.animate({
-                "marginTop": -504 * index + "px"
-            }, 1);
-            list.removeClass("active").eq(index).addClass("active");
-        }
+    var timer = null,
+    index = 0,
+    pics = byId("pics").getElementsByTagName("img"),
+    dots = byId("dots").getElementsByTagName("span"),
+    size = pics.length,
+    left = byId("left"),
+    right = byId("right");
+
+function byId(id){
+    return typeof(id)==="string"?document.getElementById(id):id;
+}
+
+// 清除定时器,停止自动播放
+function stopAutoPlay(){
+    if(timer){
+       clearInterval(timer);
     }
+}
+
+// 图片自动轮播
+function startAutoPlay(){
+   timer = setInterval(function(){
+       index++;
+       if(index >= size){
+          index = 0;
+       }
+       changeImg();
+   },3000)
+}
+
+function changeImg(){
+   for(var i=0,len=dots.length;i<len;i++){
+       dots[i].className = "";
+       pics[i].style.display = "none";
+   }
+   dots[index].className = "active";
+   pics[index].style.display = "block";
+}
+
+function slideImg(){
+    var slider = byId("slider");
+    var banner = byId("pics");
+    slider.onmouseover = function(){
+        stopAutoPlay();
+    }
+    slider.onmouseout = function(){
+        startAutoPlay();
+    }
+    slider.onmouseout();
+
+    // 点击导航切换
+    for(var i=0,len=dots.length;i<len;i++){
+       dots[i].id = i;
+       dots[i].onclick = function(){
+           index = this.id;
+           changeImg();
+       }
+    }
+
+    // 下一张
+    right.onclick = function(){
+       index++;
+       if(index>=size) index=0;
+       changeImg();
+    }
+
+    // 上一张
+    left.onclick = function(){
+       index--;
+       if(index<0) index=size-1;
+       changeImg();
+    }
+
+}
+
+slideImg();
+
+    var oWidth = $(".lunbo-container").width();
+    var index = 0;
+    var timer = null;
+    $("#up").bind("click", leftPlay);
+
+    function leftPlay() {
+        $("#item").animate({
+            "margin-left": 0 + "px"
+        }, 500)
+    }
+
+    $("#down").bind("click", rightPlay);
+
+    function rightPlay() {
+        $("#item").animate({
+            "margin-left": -oWidth + "px"
+        }, 500);
+    }
+
+    $("#item").hover(function () {
+        clearInterval(timer);
+        timer = null;
+    }, function () {
+        timer = setInterval(timeAuto, 10000);
+    });
+
+    function timeAuto() {
+        leftPlay();
+        setTimeout(rightPlay, 4000);
+    }
+
+    timer = setInterval(timeAuto, 10000);
 });
 
