@@ -336,7 +336,6 @@ header .header-container .search .search-layer .search-layer-item:hover{
 	top:50px;
     left: 100%;
     width: 744px;
-    min-height: 473px;
     padding: 8px 0 31px 0;
     background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
 	background-size: 400% 400%;
