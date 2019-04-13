@@ -492,7 +492,7 @@ aside{
     position: absolute;
     top: 50%;
     margin-top: -31px;
-    background-color: rgba(0,0,0,.2);
+    /*background-color: rgba(0,0,0,.2);*/
     opacity: 0.8;
     color: #fff;
     font-size: 22px;
@@ -500,7 +500,7 @@ aside{
     font-family: simsun;
     font-weight: bold;
 }
-.slider-control:hover{
+.middle-slider:hover .slider-control{
 	background-color: #000;
 	color:#fff;
 }
@@ -557,13 +557,17 @@ aside{
 .lunbo .slider-control-right {
     right: 0;
 }
+.lunbo-container:hover .slider-control{
+	background-color: #000;
+	color:#fff;
+}
 /*楼层区*/
 .floor{
 	width: 1200px;
 	margin:0 auto;
 }
 .floor .floor-container{
-	height:500px;
+	height:550px;
 	position: relative;
 	background: linear-gradient(-45deg, #f3f5f7, #cdd0d4, #f0f0f0, #fff);
 	background-size: 400% 400%;
@@ -600,15 +604,74 @@ aside{
 	color: #07111b;
 	font-size: 20px;
 }
-.floor-container ul{
+.floor-container .floor-head> ul{
 	margin-top: 22px;
 	float:right;
 	padding-right:10px;
 }
-.floor-container ul li{
+.floor-container .floor-head> ul > li{
 	float:left;
 	padding-right:10px;
 	color:#4d555d;
+}
+.floor .tab-active{
+	display: inline-block;
+	height: 47px;
+	color:#f01414;
+	background: url(../img/floor-arrow.png) no-repeat center bottom;
+}
+.floor .tab-list{
+	width: 1200px;
+}
+.floor .tab-panel{
+	width:1200px;
+}
+.floor-item {
+	width: 200px;
+	height: 232px;
+	padding-right: 0;
+	margin-right:0;
+	text-align: center;
+	float:left;
+	display: inline;
+	background-image: linear-gradient(#fff,transparent);
+    background-size: 400% 400%;
+    background-position: 0 100%;
+    transition: background-position 1.3s;
+}
+.floor-item:hover {
+	background-position: 0 0;
+	-webkit-transform: translate(0, -3px);
+    -moz-transform: translate(0, -3px);
+    -o-transform: translate(0, -3px);
+    -o-transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    transform: translate(-5px, -5px);
+    box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.floor-item-pic {
+	margin-top: 24px;
+}
+.floor-item-name {
+	margin-top: 24px;
+	font-size: 8px;
+}
+.floor-item-name .link {
+	color: #07111b;
+}
+.floor-item-price {
+	margin-top: 11px;
+	color: #f01414;
+	font-size: 14px;
+	font-weight: bold;
+} 
+.tab-panel {
+	height: 100%;
+}
+.floor .tab-list:nth-child(2),.floor .tab-list:nth-child(3){
+	display: none;
 }
 /*floor1*/
 /*floor2*/

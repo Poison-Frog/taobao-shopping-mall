@@ -155,17 +155,17 @@ function slideImg(){
 }
 
 slideImg();
-
+//轮播
     var oWidth = $(".lunbo-container").width();
     var times = null;
     $("#up").bind("click", leftPlay);
-
+    //左
     function leftPlay() {
         $("#item").animate({
             "margin-left": 0 + "px"
         }, 500)
     }
-
+    //右
     $("#down").bind("click", rightPlay);
 
     function rightPlay() {
@@ -187,5 +187,15 @@ slideImg();
     }
 
     times = setInterval(timeAuto, 10000);
+
+//tab选项卡
+    $(".fortab").click(function(){
+    var number=$(".fortab").index(this);
+    $(this).addClass("tab-active");
+    $(this).siblings().removeClass("tab-active");
+    $(".tab-list:eq("+number+")").show();
+    $(".tab-list:eq("+number+")").siblings().hide();
+ });
+    
 });
 
