@@ -270,7 +270,7 @@ header .header-container .search .search-layer .search-layer-item:hover{
 	height:50px;
 	line-height: 50px;
 	font-weight: bold;
-	background-image: linear-gradient(to right,#fff,yellow,orange,red,green,blue,black,orange,yellow);
+	background-image: linear-gradient(to right,#fff,#0f0,#7fff00,#7cfc00,#adff2f,#ffd700,#ff0);
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
 }
@@ -346,6 +346,9 @@ header .header-container .search .search-layer .search-layer-item:hover{
     border: 1px solid #cdd0d4;
 	z-index: 3;
 	cursor: default;
+}
+.dropdown-layer li{
+	padding-top: 10px;
 }
 .dropdown-layer li span{
 	display: block;
@@ -489,7 +492,7 @@ aside{
     position: absolute;
     top: 50%;
     margin-top: -31px;
-    background-color: transparent;
+    background-color: rgba(0,0,0,.2);
     opacity: 0.8;
     color: #fff;
     font-size: 22px;

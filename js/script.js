@@ -121,7 +121,6 @@ function changeImg(){
 
 function slideImg(){
     var slider = byId("slider");
-    var banner = byId("pics");
     slider.onmouseover = function(){
         stopAutoPlay();
     }
@@ -158,8 +157,7 @@ function slideImg(){
 slideImg();
 
     var oWidth = $(".lunbo-container").width();
-    var index = 0;
-    var timer = null;
+    var times = null;
     $("#up").bind("click", leftPlay);
 
     function leftPlay() {
@@ -177,10 +175,10 @@ slideImg();
     }
 
     $("#item").hover(function () {
-        clearInterval(timer);
-        timer = null;
+        clearInterval(times);
+        times = null;
     }, function () {
-        timer = setInterval(timeAuto, 10000);
+        times = setInterval(timeAuto, 10000);
     });
 
     function timeAuto() {
@@ -188,6 +186,6 @@ slideImg();
         setTimeout(rightPlay, 4000);
     }
 
-    timer = setInterval(timeAuto, 10000);
+    times = setInterval(timeAuto, 10000);
 });
 
