@@ -771,6 +771,7 @@ aside{
 }
 /*电梯*/
 .elevator{
+	/*display:none;*/
 	position: fixed;
 	left:320px;
 	top:50%;
